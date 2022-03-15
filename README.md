@@ -41,7 +41,3 @@ Assuming the necessary setup steps have been performed, users may run ``npm run 
 
 #### Acknowledgments
 [FRC Dashboard](http://frcdashboard.github.io/)
-
-
-## Screenshots
-![Dashboard](images/DashboardDark.png)
