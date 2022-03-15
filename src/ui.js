@@ -60,6 +60,7 @@ app.factory("updateService", () => {
       isGyroCalibrated: false,
       switch1: false,
       switch2: false,
+      hoodAngle: 0.0
     },
     motors: {
       leftEncoder: 0.0,

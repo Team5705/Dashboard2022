@@ -86,6 +86,11 @@ NetworkTables.addKeyListener("/SmartDashboard/targetVisible", (key, value) => {
     scp.updateService.onValueChanged('motors/shooterSpeed', roundVal(value));
     scp.$apply();
   });
+  NetworkTables.addKeyListener("/SmartDashboard/hoodAngle", (key, value) => {
+    scp.updateService.onValueChanged("sensors/hoodAngle", value);
+    scp.$apply();
+  });
+
   /* Conveyor */
   NetworkTables.addKeyListener("/SmartDashboard/conveyorSpeed", (key,value) => {
     scp.updateService.onValueChanged('motors/conveyorSpeed', roundVal(value));
@@ -139,7 +144,6 @@ NetworkTables.addKeyListener("/SmartDashboard/targetVisible", (key, value) => {
   });
 
   /* Sensors data */
-  
   NetworkTables.addKeyListener("/SmartDashboard/1", (key, value) => {
     scp.updateService.onValueChanged("sensors/switch1", value);
     scp.$apply();
