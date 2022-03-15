@@ -1,7 +1,7 @@
 [<img src="images/logo.png" align="right" width="150">](https://github.com/Team5705/Dashboard2022)
 # 5705 Dashboard 2022
 
-This is our newest web based FRC Dashboard to 20-21 challange.
+This is our newest web based FRC Dashboard to 22 challange.
 
 ---------
 ## Rquirements
@@ -41,7 +41,3 @@ Assuming the necessary setup steps have been performed, users may run ``npm run 
 
 #### Acknowledgments
 [FRC Dashboard](http://frcdashboard.github.io/)
-
-
-## Screenshots
-![Dashboard](images/DashboardDark.png)
