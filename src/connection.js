@@ -46,10 +46,13 @@ function onRobotConnection(connected) {
     // On connect hide the connect popup
     document.body.classList.toggle('login', false);
     loginShown = false;
-  } else if (loginShown) {
-    setLogin();
-  }else{
-    scp.data.gamedata.R
+  }
+  if(!connected){
+    if (loginShown) {
+      setLogin();
+    }
+
+    scp.data.sensors.isGyroCalibrated = false;
   }
   scp.$apply();
 }
