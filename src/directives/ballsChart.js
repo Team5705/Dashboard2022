@@ -5,7 +5,8 @@ angular.module('Dashboard').directive("ball", function() {
         value: '=',
         radio: '=',
         width: '=',
-        height: '='
+        height: '=',
+        red: '='
       },
       template: "<canvas id='canvas' width='size.width' height='size.height'/>",
       link: function(scope, element, attrs) {
@@ -16,6 +17,7 @@ angular.module('Dashboard').directive("ball", function() {
         scope.canvas.height = scope.height;
         var ctx = scope.ctx;
         var radius = scope.radio;
+        var redAlliance = scope.red;
   
         scope.size = {
           width: scope.width,
@@ -30,9 +32,13 @@ angular.module('Dashboard').directive("ball", function() {
         var onCell = '#97ae97';
 
         var onRobot = ctx.createRadialGradient(centerX-5, centerY-3, radius/8, centerX, centerY, radius);
-        onRobot.addColorStop(0, '#FBE9B7');
-        //onRobot.addColorStop(1, '#EFB73F');
-        onRobot.addColorStop(1, '#AB7E20');
+        if(redAlliance){
+          onRobot.addColorStop(0, '#ec0000');
+          onRobot.addColorStop(1, '#b30909');
+        }else{
+          onRobot.addColorStop(0, '#302de6');
+          onRobot.addColorStop(1, '#2220ab');
+        }
         
         var without = ctx.createRadialGradient(centerX-5, centerY-3, radius/8, centerX, centerY, radius);
         without.addColorStop(0, '#EBEBEB');
