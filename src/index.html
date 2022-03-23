@@ -88,7 +88,7 @@
                             <h1 class="title">Loads</h1>
                             <div layout="row" flex="grow" class="minibox">
                                 <div layout="column" flex="grow" class="" layout-align="center center" >
-                                    <ball value="data.sensors.switch1" radio="24" width="60" height="60">
+                                    <ball value="data.sensors.switch1" radio="24" width="60" height="60" red="data.fms.isRedAlliance">
                                     </ball>
                                     <ball value="data.sensors.switch2" radio="24" width="60" height="60">
                                     </ball>
@@ -208,21 +208,21 @@
                                                 </div>
                                             </div>
                                             <!-- end autonomous selector -->
-                                            <!-- test button -->
+                                            <!-- test button --
                                             <div layout="row" flex="grow">
                                                 <div layout="column" flex="grow">
                                                     <div class="medbox2" layout="row" flex="30"
                                                         layout-align="center center">
                                                         <h1 class="title"></h1>
                                                     </div>
-                                                    <div layout="row" flex="grow" class="" layout-align="center center" ng-controller="sendAuto">
+                                                    <div layout="row" flex="grow" class="" layout-align="center center">
                                                         <md-button ng-click="updateA()" class="md-raised md-accent"
                                                             ng-class="" ng-mouseenter="select('on')">Update
                                                         </md-button>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- end test button -->
+                                            !-- end test button -->
                                             <!-- gyro status -->
                                             <div layout="row" flex="grow">
                                                 <div layout="column" flex="grow">
@@ -232,7 +232,7 @@
                                                     </div>
                                                     <div layout="row" flex="grow" class="" layout-align="center center">
                                                         <state-indicator value="data.sensors.isGyroCalibrated"
-                                                            radio="19" width="40" height="40" style="height: 40px;">
+                                                            radio="16" width="35" height="35" style="height: 35px;">
                                                         </state-indicator>
                                                     </div>
                                                 </div>
@@ -409,8 +409,9 @@
                                     <div layout="column" flex="grow">
                                         <div layout="row" flex="grow">
                                             <div layout="column" flex="grow" class="nm-p">
+                                                <p>Restart dashboard</p>
+                                                <p><kbd class="key"> Ctrl</kbd>&nbsp;+ <kbd class="key"> Shift</kbd> &nbsp;+ <kbd class="key"> R</kbd></p>
                                                 <p>Not implemented</p>
-                                                <p><kbd class="key"> </kbd></p>
                                                 <p><kbd class="key"> </kbd></p>
                                                 <p><kbd class="key"> </kbd></p>
                                                 <p><kbd class="key"> </kbd></p>
