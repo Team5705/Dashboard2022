@@ -89,8 +89,14 @@ app.factory("updateService", () => {
       time: '',
       phase: "not started",
     },
+    fms: {
+      eventName: "",
+      isRedAlliance: true,
+      matchNumber: 0.0,
+      stationNumber: 1.0,
+    },
     autoMode: {
-      selectedMode: "forward",
+      selectedMode: "default",
       availableModes: { },
     },
     communication: {
@@ -157,7 +163,7 @@ app.controller("uiCtrl", ($scope, updateService) => {
 
   $scope.keydown = function(keyEvent) {
     var key = keyEvent.key.toLowerCase();
-
+    console.log(key);
     switch(key){
       case 'd':
         updateService.onValueChanged('vision/camMode', !$scope.data.vision.camMode);

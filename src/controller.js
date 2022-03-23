@@ -1,4 +1,4 @@
-/* ONLY FOR TESTING */
+/* ONLY FOR TESTING *
 
 app.controller("sendAuto", ["$scope", function ($scope) {
     $scope.autoState = false;
@@ -15,6 +15,27 @@ app.controller("sendAuto", ["$scope", function ($scope) {
 ]);
 
 /* END ONLY FOR TESTING */
+
+/* FMS INFO */
+NetworkTables.addKeyListener("/FMSInfo/EventName", (key, value) => {
+  scp.updateService.onValueChanged("fms/eventName", value);
+  scp.$apply();
+});
+NetworkTables.addKeyListener("/FMSInfo/IsRedAlliance", (key, value) => {
+  scp.updateService.onValueChanged("fms/isRedAlliance", value);
+  scp.$apply();
+});
+NetworkTables.addKeyListener("/FMSInfo/MarchNumber", (key, value) => {
+  scp.updateService.onValueChanged("fms/matchNumber", value);
+  scp.$apply();
+});
+NetworkTables.addKeyListener("/FMSInfo/StationNumber", (key, value) => {
+  scp.updateService.onValueChanged("fms/stationNumber", value);
+  scp.$apply();
+});
+
+
+
 // Key Listeners
 
 /* Streams */
