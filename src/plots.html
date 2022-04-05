@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="Dashboard">
+
+<head>
+    <meta charset="utf-8">
+    <title>FRC Dashboard</title>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <link href="css/style-dark.css" rel="stylesheet">
+    <script>if (typeof module === 'object') {
+            window.module = module; module = undefined;
+        }
+    </script>
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script>if (window.module) { module = window.module; }
+    </script>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="../node_modules/chart.js/dist/chart.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.js"></script> -->
+    <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+    <script src="networktables/networktables.js"></script>
+    <script src="ui.js"></script>
+
+    <!-- Directives -->
+
+</head>
+
+<body>
+    <div class="father" ng-controller="uiCtrl" ng-keyup="keydown($event)">
+        <div id="container" class="background" layout="column" flex="grow">
+            <!--container for the rest of the UI -->
+            <div layout="row" flex="grow">
+                <!-- left side -->
+                <div layout="column" flex="grow">
+                    <!-- firs row cameras -->
+                    <canvas id="shooterPlot" width="1366" height="540"></canvas>
+                    <!-- end second row comms and robot state-->
+                </div>
+                <!-- end left side -->
+                <!-- right side -->
+                <!-- end right side -->
+            </div>
+            <!-- end container -->
+        </div>
+    </div>
+    <!-- container-fluid -->
+
+    <script src="controller.js"></script>
+    <!-- <script src="../node_modules/@frc-web-components/frc-web-components/build/frc-web-components.min.js"></script> -->
+    <script src="plots.js"></script>
+    <!-- <script>
+        webbitStore.addSourceProvider('NetworkTables');
+        webbitStore.setDefaultSourceProvider('NetworkTables');
+    </script> -->
+</body>
+
+</html>
