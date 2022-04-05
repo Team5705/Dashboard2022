@@ -183,6 +183,77 @@ NetworkTables.addKeyListener("/SmartDashboard/targetVisible", (key, value) => {
     scp.$apply();
   });
 
+/* Power Usage by Device */
+  NetworkTables.addKeyListener("/SmartDashboard/powerFrontLeft", (key, value) => {
+    scp.updateService.onValueChanged("power/powerFrontLeft", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/powerFrontRight", (key, value) => {
+    scp.updateService.onValueChanged("power/powerFrontRight", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/powerBackLeft", (key, value) => {
+    scp.updateService.onValueChanged("power/powerBackLeft", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/powerBackRight", (key, value) => {
+    scp.updateService.onValueChanged("power/powerBackRight", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/powerIntake", (key, value) => {
+    scp.updateService.onValueChanged("power/powerIntake", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/powerConveyor1", (key, value) => {
+    scp.updateService.onValueChanged("power/powerConveyor1", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/powerConveyor2", (key, value) => {
+    scp.updateService.onValueChanged("power/powerConveyor2", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/powerShooter1", (key, value) => {
+    scp.updateService.onValueChanged("power/powerShooter1", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/powerShooter2", (key, value) => {
+    scp.updateService.onValueChanged("power/powerShooter2", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/powerHood1", (key, value) => {
+    scp.updateService.onValueChanged("power/powerHood1", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/powerHood2", (key, value) => {
+    scp.updateService.onValueChanged("power/powerHood2", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/powerRio", (key, value) => {
+    scp.updateService.onValueChanged("power/powerRio", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/powerPcm", (key, value) => {
+    scp.updateService.onValueChanged("power/powerPcm", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/batteryVoltage", (key, value) => {
+    scp.updateService.onValueChanged("power/batteryVoltage", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/totalPowerUsage", (key, value) => {
+    scp.updateService.onValueChanged("power/totalPowerUsage", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/rioCpu", (key, value) => {
+    scp.updateService.onValueChanged("power/rioCpu", value);
+    scp.$apply();
+  });
+  NetworkTables.addKeyListener("/SmartDashboard/rioRam", (key, value) => {
+    scp.updateService.onValueChanged("power/rioRam", value);
+    scp.$apply();
+  });
+
+
 addEventListener("error", (ev) => {
   ipc.send("windowError", { mesg: ev.message, file: ev.filename, lineNumber: ev.lineno,});
 });

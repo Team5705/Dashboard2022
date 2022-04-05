@@ -73,6 +73,26 @@ app.factory("updateService", () => {
       conveyorSpeed: 0.0,
       shooterSpeed: 0.0
     },
+    power: {
+      powerFrontLeft: 12,
+      powerFrontRight: 0,
+      powerBackLeft: 5,
+      powerBackRight: 0,
+      powerIntake: 20,
+      powerConveyor1: 0,
+      powerConveyor2: 0,
+      powerShooter1: 0,
+      powerShooter2: 0,
+      powerHood1: 0,
+      powerHood2: 0,
+      powerRio: 0,
+      powerPcm: 0,
+      batteryVoltage: 12,
+      totalPowerUse: 15,
+      rioCpu: 60,
+      rioRam: 75,
+    },
+
     pneumatics: {
       intake: false,
     },
@@ -217,4 +237,16 @@ app.controller('autoCtrl', ($scope, updateService) => {
       NetworkTables.putValue('/SmartDashboard/autoMode/selected', autonomous);
       console.log("Auto selected: " + autonomous);
     }
+});
+
+
+app.controller( '_showPlots', ($scope, $window) => {
+  $scope.showPlots = () => {
+    $window.open('./plots.html', '_blank', "width=1366,height=570");
+    console.log("Plots open");
+  }
+  $scope.hidePlots = () => {
+    $window.close();
+    console.log("Plots closed");
+  }
 });
