@@ -37,10 +37,10 @@ angular.module('Dashboard').directive("circleChart", function() {
 
       var maxRadius = height < width ? centerY - 1 : centerX - 1;
 
-      var startColor = '#3DD5E3';
-      var midColor = '#7B67B7';
-      var endColor = '#8D48AB';
-      var backgroundColor = '#21323A';
+      var startColor = '#00ef00';
+      var midColor = '#ffbf80';
+      var endColor = '#ec0000';
+      var backgroundColor = '#636363';
       var thickness = 0.1;
 
       function drawGraph(value, min, max) {

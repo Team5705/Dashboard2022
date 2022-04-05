@@ -42,14 +42,14 @@ angular.module("Dashboard").directive("stateIndicator", function () {
           inside.addColorStop(1, "#FF0000");
         }
 
-        ctx.clearRect(0, 0, width, height);
+        /* ctx.clearRect(0, 0, width, height);
 
         ctx.strokeStyle = ctx.fillStyle = outLine;
 
         ctx.beginPath();
         ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
         ctx.fill();
-        ctx.stroke();
+        ctx.stroke(); */
 
         ctx.strokeStyle = ctx.fillStyle = inside;
 

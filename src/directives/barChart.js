@@ -30,10 +30,10 @@ angular.module('Dashboard').directive("barChart", function() {
       var centerX = width / 2;
       var centerY = height / 2;
 
-      var startColor = '#3DD5E3';
-      var midColor = '#7B67B7';
-      var endColor = '#8D48AB';
-      var backgroundColor = '#21323A';
+      var startColor = '#00ef00';
+      var midColor = '#e04040';
+      var endColor = '#ec0000';
+      var backgroundColor = '#181818';
       var thickness = 0.2;
 
       function drawGraph(value, min, max) {
@@ -43,7 +43,7 @@ angular.module('Dashboard').directive("barChart", function() {
         gradient.addColorStop(0.5, midColor);
         gradient.addColorStop(1, endColor);
 
-        var fontSize = height - 2;
+        var fontSize = height - 4;
         var font = fontSize + 'px sans-serif';
 
         var range = max - min;
